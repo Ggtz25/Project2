@@ -1,0 +1,653 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!--preloading-->
+<div id="preloader">
+    <img class="logo" src="{% static 'images/logo1.png' %}" alt="" width="119" height="58">
+    <div id="status">
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--end of preloading-->
+<!--login form popup-->
+<div class="login-wrapper" id="login-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>Login</h3>
+        <form method="post" action="#">
+        	<div class="row">
+        		 <label for="username">
+                    Username:
+                    <input type="text" name="username" id="username" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                </label>
+        	</div>
+           
+            <div class="row">
+            	<label for="password">
+                    Password:
+                    <input type="password" name="password" id="password" placeholder="******" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+            </div>
+            <div class="row">
+            	<div class="remember">
+					<div>
+						<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+					</div>
+            		<a href="#">Forget password ?</a>
+            	</div>
+            </div>
+           <div class="row">
+           	 <button type="submit">Login</button>
+           </div>
+        </form>
+        <div class="row">
+        	<p>Or via social</p>
+            <div class="social-btn-2">
+            	<a class="fb" href="#"><i class="ion-social-facebook"></i>Facebook</a>
+            	<a class="tw" href="#"><i class="ion-social-twitter"></i>twitter</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of login form popup-->
+<!--signup form popup-->
+<div class="login-wrapper"  id="signup-content">
+    <div class="login-content">
+        <a href="#" class="close">x</a>
+        <h3>sign up</h3>
+        <form method="post" action="#">
+            <div class="row">
+                 <label for="username-2">
+                    Username:
+                    <input type="text" name="username" id="username-2" placeholder="Hugh Jackman" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                </label>
+            </div>
+           
+            <div class="row">
+                <label for="email-2">
+                    your email:
+                    <input type="password" name="email" id="email-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+            </div>
+             <div class="row">
+                <label for="password-2">
+                    Password:
+                    <input type="password" name="password" id="password-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+            </div>
+             <div class="row">
+                <label for="repassword-2">
+                    re-type Password:
+                    <input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+                </label>
+            </div>
+           <div class="row">
+             <button type="submit">sign up</button>
+           </div>
+        </form>
+    </div>
+</div>
+<!--end of signup form popup-->
+
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a href="index-2.html"><img class="logo" src="{% static 'images/logo1.png' %}" alt="" width="119" height="58"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+							Home <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="index-2.html">Home 01</a></li>
+								<li><a href="homev2.html">Home 02</a></li>
+								<li><a href="homev3.html">Home 03</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							movies<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Movie grid<i class="ion-ios-arrow-forward"></i></a>
+									<ul class="dropdown-menu level2">
+										<li><a href="moviegrid.html">Movie grid</a></li>
+										<li><a href="moviegridfw.html">movie grid full width</a></li>
+									</ul>
+								</li>			
+								<li><a href="movielist.html">Movie list</a></li>
+								<li><a href="moviesingle.html">Movie single</a></li>
+								<li class="it-last"><a href="seriessingle.html">Series single</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="celebritygrid01.html">celebrity grid 01</a></li>
+								<li><a href="celebritygrid02.html">celebrity grid 02 </a></li>
+								<li><a href="celebritylist.html">celebrity list</a></li>
+								<li class="it-last"><a href="celebritysingle.html">celebrity single</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							news <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="bloglist.html">blog List</a></li>
+								<li><a href="bloggrid.html">blog Grid</a></li>
+								<li class="it-last"><a href="blogdetail.html">blog Detail</a></li>
+							</ul>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							community <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="userfavoritegrid.html">user favorite grid</a></li>
+								<li><a href="userfavoritelist.html">user favorite list</a></li>
+								<li><a href="userprofile.html">user profile</a></li>
+								<li class="it-last"><a href="userrate.html">user rate</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav flex-child-menu menu-right">
+						<li class="dropdown first">
+							<a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+							pages <i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu level1">
+								<li><a href="landing.html">Landing</a></li>
+								<li><a href="404.html">404 Page</a></li>
+								<li class="it-last"><a href="comingsoon.html">Coming soon</a></li>
+							</ul>
+						</li>                
+						<li><a href="#">Help</a></li>
+						<li class="loginLink"><a href="#">LOG In</a></li>
+						<li class="btn signupLink"><a href="#">sign up</a></li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="slider movie-items">
+	<div class="container">
+		<div class="row">
+			<div class="social-link">
+				<p>Follow us: </p>
+				<!-- DB -->
+				{% for link in social_links %}
+					<a href="{{ link.url }}" class="{{ link.anchor_class }}">
+						<i class="{{ link.icon_class }}"></i>
+					</a>
+				{% endfor %}
+			</div>
+	    	<div  class="slick-multiItemSlider">
+				<!--  DB  -->
+	    		{% for slide in sliders %}
+				<div class="movie-item">
+					<div class="mv-img">
+						<a href="{{ slide.anchor_url }}">
+							<img src="{% static slide.image_src %}" alt="" width="{{ slide.image_width }}" height="{{ slide.image_height }}">
+						</a>
+					</div>
+					<div class="title-in">
+						<div class="cate">
+							<span class="blue"><a href="#">{{ slide.movie_genre }}</a></span>
+						</div>
+						<h6><a href="{{ slide.anchor_url }}">{{ slide.movie_title }}</a></h6>
+						<p>
+							<i class="ion-android-star"></i>
+							<span>{{ slide.lower_rating }}</span> {{ slide.upper_rating }}
+						</p>
+					</div>
+				</div>
+				{% endfor %}
+	    	</div>
+	    </div>
+	</div>
+</div>
+<div class="movie-items">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8">
+				<div class="title-hd">
+					<h2>in theater</h2>
+					<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+				</div>
+				<div class="tabs">
+					<ul class="tab-links">
+						<li class="active"><a href="#tab1">#Popular</a></li>
+						<li><a href="#tab2"> #Coming soon</a></li>
+                 
+					</ul>
+				    <div class="tab-content">
+				        <div id="tab1" class="tab active">
+				            <div class="row">
+				            	<div class="slick-multiItem">
+									<!--  DB  -->
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+											<div class="title-in">
+												<h6><a href="{{ movie.anchor_url }}">{{ movie.movie_title }}</a></h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+				        </div>
+				        <div id="tab2" class="tab">
+				           <div class="row">
+				            	<div class="slick-multiItem">
+									<!--  DB  -->
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" 
+													alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+
+											<div class="title-in">
+												<h6>
+													<a href="{{ movie.anchor_url }}">
+														{{ movie.movie_title }}
+													</a>
+												</h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+				        </div>
+				        
+			       	 	
+				    </div>
+				</div>
+				<div class="title-hd">
+					<h2>on tv</h2>
+					<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+				</div>
+				<div class="tabs">
+					<ul class="tab-links-2">
+						<li><a href="#tab21">#Popular</a></li>
+						<li class="active"><a href="#tab22"> #Coming soon</a></li>
+                   
+					</ul>
+				    <div class="tab-content">
+				        <div id="tab21" class="tab">
+				            <div class="row">
+				            	<div class="slick-multiItem">
+									<!--  DB  -->
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" 
+													alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+
+											<div class="title-in">
+												<h6>
+													<a href="{{ movie.anchor_url }}">{{ movie.movie_title }}</a>
+												</h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+				        </div>
+				        <div id="tab22" class="tab active">
+				           <div class="row">
+				            	<div class="slick-multiItem">
+									<!--  DB  -->
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" 
+													alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+
+											<div class="title-in">
+												<h6>
+													<a href="{{ movie.anchor_url }}">
+														{{ movie.movie_title }}
+													</a>
+												</h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+				        </div>
+				        <div id="tab23" class="tab">
+							<!--  DB  -->
+				        	<div class="row">
+				            	<div class="slick-multiItem">
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" 
+													alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+
+											<div class="title-in">
+												<h6>
+													<a href="{{ movie.anchor_url }}">
+														{{ movie.movie_title }}
+													</a>
+												</h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+			       	 	</div>
+			       	 	 <div id="tab24" class="tab">
+				        	<div class="row">
+				            	<div class="slick-multiItem">
+									<!--  DB  -->
+				            		{% for movie in movies_theater %}
+									<div class="slide-it">
+										<div class="movie-item">
+											<div class="mv-img">
+												<img src="{% static movie.img_src %}" 
+													alt=""
+													width="{{ movie.img_width }}"
+													height="{{ movie.img_height }}">
+											</div>
+
+											<div class="hvr-inner">
+												<a href="{{ movie.anchor_url }}">
+													Read more <i class="ion-android-arrow-dropright"></i>
+												</a>
+											</div>
+
+											<div class="title-in">
+												<h6><a href="{{ movie.anchor_url }}">{{ movie.movie_title }}</a></h6>
+												<p>
+													<i class="ion-android-star"></i>
+													<span>{{ movie.lower_rating }}</span> {{ movie.upper_rating }}
+												</p>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+				            	</div>
+				            </div>
+			       	 	</div>
+				    </div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="sidebar">
+					<div class="ads">
+						<!-- DB -->
+						{% for ad in ads %}
+							<img src="{% static ad.img_src %}" 
+								alt=""
+								width="{{ ad.img_width }}"
+								height="{{ ad.img_height }}">
+						{% endfor %}
+					</div>
+					
+					<div class="celebrities">
+						<h4 class="sb-title">Spotlight Celebrities</h4>
+						<!-- DB -->
+						{% for celeb in celebrities %}
+						<div class="celeb-item">
+							<a href="{{ celeb.anchor_url }}">
+								<img src="{% static celeb.celebrity_url %}" 
+									alt=""
+									width="{{ celeb.img_width }}"
+									height="{{ celeb.img_height }}">
+							</a>
+							<div class="celeb-author">
+								<h6><a href="{{ celeb.anchor_url }}">{{ celeb.celebrity_name }}</a></h6>
+								<span>{{ celeb.celebrity_type }}</span>
+							</div>
+						</div>
+						{% endfor %}
+						<a href="#" class="btn">See all celebrities<i class="ion-ios-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="trailers">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-12">
+				<div class="title-hd">
+					<h2>in theater</h2>
+					<a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
+				</div>
+				<div class="videos">
+				 	<div class="slider-for-2 video-ft">
+					<!-- DB -->
+				{% for trailer in trailers %}
+				<div>
+					<iframe class="item-video"
+							src="{{ trailer.trailer_url }}"
+							data-src="{{ trailer.trailer_url }}"
+							allowfullscreen
+							referrerpolicy="strict-origin-when-cross-origin">
+					</iframe>
+				</div>
+				{% endfor %}
+				
+						
+					</div>
+					<div class="slider-nav-2 thumb-ft">
+						<!-- DB -->
+						{% for item in trailer_items %}
+						<div class="item">
+							<div class="trailer-img">
+								<img src="{% static item.img_src %}"
+									alt="{{ item.img_alt }}"
+									width="{{ item.img_width }}"
+									height="{{ item.img_height }}">
+							</div>
+							<div class="trailer-infor">
+								<h4 class="desc">{{ item.description }}</h4>
+								<p>{{ item.duration }}</p>
+							</div>
+						</div>
+						{% endfor %}
+					
+					</div>
+				</div>   
+			</div>
+		</div>
+	</div>
+</div>
+<!-- latest new v1 section-->
+<div class="latestnew">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8">
+				<div class="ads">
+					<!-- DB -->
+					{% for ad in ads %}
+						<img src="{% static ad.img_src %}" 
+							alt=""
+							width="{{ ad.img_width }}"
+							height="{{ ad.img_height }}">
+					{% endfor %}			
+				</div>
+				<div class="title-hd">
+					<h2>Latest news</h2>
+				</div>
+				<div class="tabs">
+				    <div class="tab-content">
+				        <div id="tab31" class="tab active">
+				            <div class="row">
+				            	{% if news_main %}
+								<div class="blog-item-style-1">
+									<img src="{% static news_main.img_src %}" 
+										alt="{{ news_main.img_alt }}" 
+										width="{{ news_main.img_width }}" 
+										height="{{ news_main.img_height }}">
+
+									<div class="blog-it-infor">
+										<h3><a href="#">{{ news_main.title }}</a></h3>
+										<span class="time">{{ news_main.time }}</span>
+										<p>{{ news_main.content }}</p>
+									</div>
+								</div>
+								{% endif %}
+				            </div>
+				        </div>				        
+				    </div>
+				</div>
+				<div class="morenew">
+					<div class="title-hd">
+						<h3>More news on Blockbuster</h3>
+						<a href="#" class="viewall">See all Movies news<i class="ion-ios-arrow-right"></i></a>
+					</div>
+					<div class="more-items">
+						<div class="left">
+							<!-- DB -->
+							{% for item in news_side %}
+							<div class="more-it">
+								<h6><a href="#">{{ item.title }}</a></h6>
+								<span class="time">{{ item.time }}</span>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="right">
+							<!-- DB -->
+							{% for item in news_items %}
+							<div class="more-it">
+								<h6><a href="#">{{ item.title }}</a></h6>
+								<span class="time">{{ item.time }}</span>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="sidebar">					
+					<div class="sb-twitter sb-it">
+						<h4 class="sb-title">Tweet to us</h4>
+						<!-- DB -->
+						{% for tweet in tweets %}
+						<div class="tweet item">
+							{{ tweet.content }}
+						</div>
+						{% endfor %}		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--end of latest new v1 section-->
+{% endblock %}
