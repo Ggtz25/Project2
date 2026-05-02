@@ -2,7 +2,6 @@ from django.shortcuts import render
 from .models import SocialLink, Slider, MovieTheater, Advertisement, Celebrity, Trailer, TrailerItem, Tweet, News, NewsletterSubscriber
 
 def home(request):
-<<<<<<< HEAD
 
     if request.method == "POST":
         email = request.POST.get("email")
@@ -33,6 +32,4 @@ def home(request):
         'news_main': news_main,
         'news_side': news_side,
     })
-=======
     return render(request, 'mainapp/index.html')
->>>>>>> 3988b77cc86ec854ecce1b13ab0183ad8bba35a9
