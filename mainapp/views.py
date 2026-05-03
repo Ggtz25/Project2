@@ -32,4 +32,3 @@ def home(request):
         'news_main': news_main,
         'news_side': news_side,
     })
-    return render(request, 'mainapp/index.html')
